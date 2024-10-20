@@ -1,0 +1,25 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sv.edu.ufg.fis.amb.permisosfotos_ns100221">
+
+    <!-- Permisos necesarios para usar la cámara y acceder al almacenamiento -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:label="PermisosFotos_NS100221"
+        android:theme="@style/Theme.PermisosFotos_NS100221">
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <!-- Definimos esta actividad como la principal y de lanzamiento -->
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
